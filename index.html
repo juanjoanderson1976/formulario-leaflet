@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es-AR" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prueba formulario - Keepers Agencia Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/aos.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="leaflet.css" />
+    <link href="css/theme.css?n=1" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="btn-rounded scroll-assist">
+
+    <!-- loader -->
+    <!-- fin loader -->
+
+    <!-- navegador -->
+    <div class="nav-container">
+    </div>
+    <!-- fin navegador -->
+
+    <!-- contenedor html -->
+    <div class="main-container">
+
+        <!-- seccion HERO -->
+        <section class="bg-shape bg-primary background-multiply overlay image-bg parallax pt240 pb240 pt-xs-120 pb-xs-80">
+            <div class="background-image-holder">
+                <img alt="image" class="background-image" src="images/cover12.jpg">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- <img alt="Logo" class="image-small mb40 mb-xs-0" src=""> -->
+                        <div class="" data-aos="fade-up" data-aos-duration="2000">
+                            <h1 class="">
+                                Esta web es una versión de prueba <br class="hidden-sm">de formulario y mapa leaflet.js.
+                            </h1>
+                            <a class="btn btn-lg btn-white mb0 inner-link" href="#paso1">Comenzar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- efecto wave-->
+            <div class="shape">
+                <img src="images/wave.svg" alt="" class="img-fluid mx-auto d-block">
+            </div>
+        </section>
+        <!-- fin seccion HERO -->
+
+        <!-- seccion FEATURES -->
+        <section id="paso1" class="pt64 pb64 pb-xs-40 bg-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4">
+                        <!-- filled: relleno icono -->
+                        <div class="feature feature-2 filled text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="text-center">
+                                <i class="ti-mobile icon-sm shadow2"></i>
+                                <h5 class="uppercase">Responsive</h5>
+                            </div>
+                            <p>
+                                Web adaptable a diferentes dispositivos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 mt-xs-48">
+                        <div class="feature feature-2 filled text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="text-center">
+                                <i class="ti-gallery icon-sm shadow2"></i>
+                                <h5 class="uppercase">Parallax</h5>
+                            </div>
+                            <p>
+                                Web con efectos parallax para mejores efectos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 mt-xs-48">
+                        <div class="feature feature-2 filled text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="text-center">
+                                <i class="ti-wand icon-sm shadow2"></i>
+                                <h5 class="uppercase">Animaciones</h5>
+                            </div>
+                            <p>
+                                Web con animaciones para mejores presentaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fin seccion FEATURES -->
+
+        <!-- seccion formulario whatsapp -->
+        <section class="pt96 pb64">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <hr class="short-thick">
+                        <h2 class="mb8">¡Escribinos!</h2>
+                        <p class="lead mb40 mb-xs-24">
+                            Si tenés alguna duda, por favor escríbenos.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="popin">
+                            <div id="map"></div>
+                        </div>
+                        <!-- <a id="email" href="mailto:juanjoanderson@gmail.com" target="_blank" rel="nofollow" class="hidden"></a> -->
+                        <form id="form-contacto-whatsapp" class="form-contacto">
+                            <input type="text" class="shadow" name="nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Nombre" title="Deberás rellenar este campo sólo con letras" required>
+
+                            <input type="email" class="shadow" name="email" placeholder="Email" title="Deberás rellenar este campo solo con un email" required>
+
+                            <input type="text" class="shadow" name="asunto" placeholder="Asunto" title="Deberás rellenar este campo" required>
+
+                            <textarea class="shadow" name="mensaje" rows="4" pattern="^.{1,255}$" placeholder="Mensaje..." title="Deberás rellenar este campo con un máximo de 255 caracteres" required></textarea>
+
+                            <button type="submit" id="submit" class="btn btn-filled btn-lg shadow2">Enviar mensaje</button>
+
+                            <div id="respuesta" class="form-contacto-respuesta hidden">
+                            </div>
+                            <div id="loader" class="form-contacto-cargando hidden">
+                                <img src="images/loader.gif" alt="">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fin seccion formulario -->
+
+        <!-- seccion CTA -->
+        <section class="bg-shape bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="text-hover-shape col-sm-12 text-center">
+                        <hr class="short-thick">
+                        <h2 class="mb8">¡Tené tu <strong>página web profesional</strong> <br class="hidden-xs">a un precio increible!</h2>
+                        <p class="lead mb40 mb-xs-24">
+                            Moderna, adaptable y simple.
+                        </p>
+                        <a class="btn btn-filled btn-lg mb24" href="#purchase-template">¡A un click de distancia!</a>
+                    </div>
+                </div>
+            </div>
+            <!-- efecto wave-->
+            <div class="shape">
+                <img src="images/wave-footer.svg" alt="" class="img-fluid mx-auto d-block">
+            </div>
+        </section>
+        <!-- fin seccion CTA -->
+
+        <!-- footer -->
+        <footer class="footer-2 bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center mb64 mb-xs-24">
+                        <a href="#">
+                            <img alt="Keepers" class="image-xs mb16" src="">
+                        </a>
+                        <p class="lead mb48 mb-xs-16">
+                            Av Monroe N° 2164<br>Ciudad Autonoma de Buenos Aires<br>Argentina<br>info@keepers.com.ar
+                        </p>
+                        <ul class="list-inline social-list">
+                            <li><a href="#"><i class="icon icon-sm ti-twitter-alt"></i></a></li>
+                            <li><a href="#"><i class="icon icon-sm ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon icon-sm ti-dribbble"></i></a></li>
+                            <li><a href="#"><i class="icon icon-sm ti-vimeo-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row fade-half">
+                    <div class="col-md-12 text-center">
+                        <span>Web desarrollada con <i class="fas fa-heart heartbeat"></i> por Keepers.com.ar</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- fin footer -->
+
+    </div>
+    <!-- fin contenedor html -->
+
+    <!-- contenido JAVASCRIPT -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- fin contenido JAVASCRIPT -->
+
+</body>
+
+</html>
